@@ -1,0 +1,965 @@
+   # # Approximate bounds for the continental US
+    # lat_north = 49.384472
+    # lat_south = 24.396308
+    # lon_east = -66.93457
+    # lon_west = -125.00165
+    # Approximate bounds for the San Francisco Bay Area
+    # lat_north = 37.812  
+    # lat_south = 37.703  
+    # lon_east = -122.3482 
+    # lon_west = -122.527 
+    # Approximate bounds for the Sacramento Area
+    # lat_north = 38.6855
+    # lat_south = 38.4379
+    # lon_east = -121.3722
+    # lon_west = -121.5778
+    # Approximate bounds around Redding, California
+    # lat_north = 40.65
+    # lat_south = 40.53
+    # lon_east = -122.32
+    # lon_west = -122.45
+    # Approximate bounds around Mt. Shasta, California
+    # lat_north = 41.42
+    # lat_south = 41.30
+    # lon_east = -122.30
+    # lon_west = -122.45
+    # Approximate bounds around Los Angeles, California
+    # lat_north = 34.3373
+    # lat_south = 33.7037
+    # lon_east = -118.1553
+    # lon_west = -118.6682
+    # Approximate bounds around Reno, Nevada
+    # lat_north = 39.66
+    # lat_south = 39.44
+    # lon_east = -119.71
+    # lon_west = -119.93
+    # Approximate bounds around Las Vegas, Nevada
+    # lat_north = 36.3803
+    # lat_south = 36.1296
+    # lon_east = -115.0627
+    # lon_west = -115.3160
+    # Approximate bounds around Austin, Nevada
+    # lat_north = 39.500
+    # lat_south = 39.465
+    # lon_east = -117.065
+    # lon_west = -117.105
+    # Approximate bounds around Eureka, Nevada
+    # lat_north = 39.52
+    # lat_south = 39.48
+    # lon_east = -115.95
+    # lon_west = -115.99
+    # Approximate bounds around Battle Mountain, Nevada
+    # lat_north = 40.67
+    # lat_south = 40.61
+    # lon_east = -116.92
+    # lon_west = -116.96
+    # Approximate bounds around Portland, Oregon
+    # lat_north = 45.65
+    # lat_south = 45.43
+    # lon_east = -122.47
+    # lon_west = -122.85
+    # Approximate bounds around Redmond, Oregon
+    # lat_north = 44.310
+    # lat_south = 44.250
+    # lon_east = -121.150
+    # lon_west = -121.250
+    # Approximate bounds around Eugene, Oregon
+    # lat_north = 44.1
+    # lat_south = 43.9
+    # lon_east = -122.9
+    # lon_west = -123.2
+    # Approximate bounds around Seattle, Washington
+    # lat_north = 47.735
+    # lat_south = 47.495
+    # lon_east = -122.235
+    # lon_west = -122.435
+    # Approximate bounds around Tacoma, Washington
+    # lat_north = 47.320
+    # lat_south = 47.210
+    # lon_east = -122.365
+    # lon_west = -122.550
+    # Approximate bounds around Spokane, Washington
+    # lat_north = 47.770
+    # lat_south = 47.620
+    # lon_east = -117.360
+    # lon_west = -117.490
+    # Approximate bounds around Othello, Washington
+    # lat_north = 46.840
+    # lat_south = 46.800
+    # lon_east = -119.150
+    # lon_west = -119.190
+    # Approximate bounds around Boise, Idaho
+    # lat_north = 43.65
+    # lat_south = 43.54
+    # lon_east = -116.15
+    # lon_west = -116.31
+    # Approximate bounds around Twin Falls, Idaho
+    # lat_north = 42.62
+    # lat_south = 42.54
+    # lon_east = -114.44
+    # lon_west = -114.52
+    # Approximate bounds around Lewiston, Idaho
+    # lat_north = 46.44
+    # lat_south = 46.34
+    # lon_east = -116.96
+    # lon_west = -117.05
+    # Approximate bounds around Idaho Falls, Idaho
+    # lat_north = 43.53
+    # lat_south = 43.45
+    # lon_east = -111.97
+    # lon_west = -112.07
+    # Approximate bounds around Salt Lake City, Utah
+    # lat_north = 40.82
+    # lat_south = 40.70
+    # lon_east = -111.82
+    # lon_west = -112.02
+    # Approximate bounds around Richfield, Utah
+    # lat_north = 38.79
+    # lat_south = 38.74
+    # lon_east = -112.07
+    # lon_west = -112.13\
+    # Approximate bounds around Cedar City, Utah
+    # lat_north = 37.72
+    # lat_south = 37.63
+    # lon_east = -113.02
+    # lon_west = -113.10
+    # Approximate bounds around Moab, Utah
+    # lat_north = 38.60
+    # lat_south = 38.52
+    # lon_east = -109.52
+    # lon_west = -109.60
+    # Approximate bounds around Phoenix, Arizona
+    # lat_north = 33.85
+    # lat_south = 33.2
+    # lon_east = -111.83
+    # lon_west = -112.32
+    # Approximate bounds around Tucson, Arizona
+    # lat_north = 32.32
+    # lat_south = 32.13
+    # lon_east = -110.75
+    # lon_west = -111.05
+    # Approximate bounds around Flagstaff, Arizona
+    # lat_north = 35.25
+    # lat_south = 35.15
+    # lon_east = -111.57
+    # lon_west = -111.72
+    # Approximate bounds around Kingman, Arizona
+    # lat_north = 35.27
+    # lat_south = 35.17
+    # lon_east = -113.98
+    # lon_west = -114.08
+    # Approximate bounds around Albuquerque, New Mexico
+    # lat_north = 35.22
+    # lat_south = 35.02
+    # lon_east = -106.48
+    # lon_west = -106.78
+    # Approximate bounds around Roswell, New Mexico
+    # lat_north = 33.45
+    # lat_south = 33.35
+    # lon_east = -104.48
+    # lon_west = -104.58
+    # Approximate bounds around Taos, New Mexico
+    # lat_north = 36.45
+    # lat_south = 36.37
+    # lon_east = -105.55
+    # lon_west = -105.62
+    # Approximate bounds around Silver City, New Mexico
+    # lat_north = 32.80
+    # lat_south = 32.72
+    # lon_east = -108.25
+    # lon_west = -108.32
+    # Approximate bounds around Dallas, Texas
+    # lat_north = 33.00
+    # lat_south = 32.62
+    # lon_east = -96.46
+    # lon_west = -96.999
+    # Approximate bounds around Houston, Texas
+    # lat_north = 29.92
+    # lat_south = 29.52
+    # lon_east = -95.01
+    # lon_west = -95.78
+    # Approximate bounds around San Antonio, Texas
+    # lat_north = 29.65
+    # lat_south = 29.23
+    # lon_east = -98.3
+    # lon_west = -98.76
+    # Approximate bounds around Lubbock, Texas
+    # lat_north = 33.65
+    # lat_south = 33.45
+    # lon_east = -101.78
+    # lon_west = -102.0
+    # Approximate bounds around Odessa, Texas
+    # lat_north = 31.92
+    # lat_south = 31.82
+    # lon_east = -102.28
+    # lon_west = -102.42
+    # Approximate bounds around New Orleans, Louisiana
+    # lat_north = 30.05
+    # lat_south = 29.90
+    # lon_east = -89.90
+    # lon_west = -90.14
+    # Approximate bounds around Baton Rouge, Louisiana
+    # lat_north = 30.53
+    # lat_south = 30.35
+    # lon_east = -90.99
+    # lon_west = -91.22
+    # Approximate bounds around Alexandria, Louisiana
+    # lat_north = 31.32
+    # lat_south = 31.25
+    # lon_east = -92.41
+    # lon_west = -92.51
+    # Approximate bounds around Winnfield, Louisiana
+    # lat_north = 31.95
+    # lat_south = 31.90
+    # lon_east = -92.63
+    # lon_west = -92.68
+    # Approximate bounds around Jackson, Mississippi
+    # lat_north = 32.40
+    # lat_south = 32.27
+    # lon_east = -90.11
+    # lon_west = -90.25
+    # Approximate bounds around Hattiesburg, Mississippi
+    # lat_north = 31.38
+    # lat_south = 31.28
+    # lon_east = -89.28
+    # lon_west = -89.38
+    # Approximate bounds around Gulfport, Mississippi
+    # lat_north = 30.45
+    # lat_south = 30.35
+    # lon_east = -89.03
+    # lon_west = -89.13
+    # Approximate bounds around Tupelo, Mississippi
+    # lat_north = 34.28
+    # lat_south = 34.23
+    # lon_east = -88.68
+    # lon_west = -88.78
+    # Approximate bounds around Montgomery, Alabama
+    # lat_north = 32.40
+    # lat_south = 32.30
+    # lon_east = -86.20
+    # lon_west = -86.35
+    # Approximate bounds around Birmingham, Alabama
+    # lat_north = 33.65
+    # lat_south = 33.40
+    # lon_east = -86.60
+    # lon_west = -86.90
+    # Approximate bounds around Dothan, Alabama
+    # lat_north = 31.26
+    # lat_south = 31.18
+    # lon_east = -85.37
+    # lon_west = -85.45
+    # Approximate bounds around Huntsville, Alabama
+    # lat_north = 34.80
+    # lat_south = 34.62
+    # lon_east = -86.52
+    # lon_west = -86.75
+    # Approximate bounds around Decatur, Alabama
+    # lat_north = 34.62
+    # lat_south = 34.52
+    # lon_east = -86.95
+    # lon_west = -87.05
+    # Approximate bounds around Savannah, Georgia
+    # lat_north = 32.13
+    # lat_south = 31.95
+    # lon_east = -80.98
+    # lon_west = -81.18
+    # Approximate bounds around Waycross, Georgia
+    # lat_north = 31.23
+    # lat_south = 31.18
+    # lon_east = -82.32
+    # lon_west = -82.38
+    # Approximate bounds around Macon, Georgia
+    # lat_north = 32.91
+    # lat_south = 32.76
+    # lon_east = -83.57
+    # lon_west = -83.72
+    # Approximate bounds around Atlanta, Georgia
+    # lat_north = 33.89
+    # lat_south = 33.65
+    # lon_east = -84.28
+    # lon_west = -84.55
+    # Approximate bounds around West Palm Beach, Florida
+    # lat_north = 26.78
+    # lat_south = 26.65
+    # lon_east = -80.05
+    # lon_west = -80.17
+    # Approximate bounds around Miami, Florida
+    # lat_north = 25.85
+    # lat_south = 25.70
+    # lon_east = -80.18
+    # lon_west = -80.32
+    # Approximate bounds around Orlando, Florida
+    # lat_north = 28.61
+    # lat_south = 28.38
+    # lon_east = -81.22
+    # lon_west = -81.46
+    # Approximate bounds around Gainesville, Florida
+    # lat_north = 29.73
+    # lat_south = 29.62
+    # lon_east = -82.29
+    # lon_west = -82.40
+    # Approximate bounds around St. Petersburg, Florida
+    # lat_north = 27.88
+    # lat_south = 27.70
+    # lon_east = -82.62
+    # lon_west = -82.75
+    # Approximate bounds around Charleston, South Carolina
+    # lat_north = 32.85
+    # lat_south = 32.70
+    # lon_east = -79.87
+    # lon_west = -80.04
+    # Approximate bounds around Columbia, South Carolina
+    # lat_north = 34.07
+    # lat_south = 33.92
+    # lon_east = -80.86
+    # lon_west = -81.10
+    # Approximate bounds around Florence, South Carolina
+    # lat_north = 34.24
+    # lat_south = 34.17
+    # lon_east = -79.72
+    # lon_west = -79.82
+    # Approximate bounds around Greenville, South Carolina
+    # lat_north = 34.90
+    # lat_south = 34.78
+    # lon_east = -82.32
+    # lon_west = -82.45
+    # Approximate bounds around Charlotte, North Carolina
+    # lat_north = 35.40
+    # lat_south = 35.15
+    # lon_east = -80.71
+    # lon_west = -81.03
+    # Approximate bounds around Raleigh, North Carolina
+    # lat_north = 35.94
+    # lat_south = 35.75
+    # lon_east = -78.49
+    # lon_west = -78.71
+    # Approximate bounds around Asheville, North Carolina
+    # lat_north = 35.65
+    # lat_south = 35.55
+    # lon_east = -82.50
+    # lon_west = -82.62
+    # Approximate bounds around Kitty Hawk, North Carolina
+    # lat_north = 36.08
+    # lat_south = 36.05
+    # lon_east = -75.67
+    # lon_west = -75.72
+    # Approximate    # lat_north = 34.27
+    # lat_south = 34.14
+    # lon_east = -77.83
+    # lon_west = -77.95
+    # Approximate bounds around Nashville, Tennessee
+    # lat_north = 36.35
+    # lat_south = 36.05
+    # lon_east = -86.65
+    # lon_west = -87.05
+    # Approximate bounds around Pigeon Forge, Tennessee
+    # lat_north = 35.83
+    # lat_south = 35.78
+    # lon_east = -83.53
+    # lon_west = -83.58
+    # Approximate bounds around Jackson, Tennessee
+    # lat_north = 35.70
+    # lat_south = 35.58
+    # lon_east = -88.80
+    # lon_west = -88.93
+    # Approximate bounds around Memphis, Tennessee
+    # lat_north = 35.20
+    # lat_south = 35.00
+    # lon_east = -89.80
+    # lon_west = -90.10
+    # Approximate bounds around Richmond, Virginia
+    # lat_north = 37.60
+    # lat_south = 37.47
+    # lon_east = -77.40
+    # lon_west = -77.55
+    # Approximate bounds around Roanoke, Virginia
+    # lat_north = 37.32
+    # lat_south = 37.22
+    # lon_east = -79.90
+    # lon_west = -80.05
+    # Approximate bounds around Norfolk, Virginia
+    # lat_north = 36.95
+    # lat_south = 36.80
+    # lon_east = -76.19
+    # lon_west = -76.31
+    # Approximate bounds around Fredericksburg, Virginia
+    # lat_north = 38.35
+    # lat_south = 38.25
+    # lon_east = -77.45
+    # lon_west = -77.53
+    # Approximate bounds around Washington, D.C.
+    # lat_north = 38.995
+    # lat_south = 38.791
+    # lon_east = -76.909
+    # lon_west = -77.119
+    # Approximate bounds around Beckley, West Virginia
+    # lat_north = 37.81
+    # lat_south = 37.75
+    # lon_east = -81.17
+    # lon_west = -81.22
+    # Approximate bounds around Fairmont, West Virginia
+    # lat_north = 39.52
+    # lat_south = 39.45
+    # lon_east = -80.10
+    # lon_west = -80.17
+    # Approximate bounds around Charleston, West Virginia
+    # lat_north = 38.40
+    # lat_south = 38.30
+    # lon_east = -81.55
+    # lon_west = -81.70
+    # Approximate bounds around Baltimore, Maryland
+    # lat_north = 39.38
+    # lat_south = 39.25
+    # lon_east = -76.53
+    # lon_west = -76.71
+    # Approximate bounds around Salisbury, Maryland
+    # lat_north = 38.38
+    # lat_south = 38.33
+    # lon_east = -75.56
+    # lon_west = -75.62
+    # Approximate bounds around Waldorf, Maryland
+    # lat_north = 38.65
+    # lat_south = 38.60
+    # lon_east = -76.88
+    # lon_west = -76.95
+    # Approximate bounds around Cumberland, Maryland
+    # lat_north = 39.67
+    # lat_south = 39.62
+    # lon_east = -78.74
+    # lon_west = -78.80
+    # Approximate bounds around Dover, Delaware
+    # lat_north = 39.18
+    # lat_south = 39.13
+    # lon_east = -75.49
+    # lon_west = -75.55
+    # Approximate bounds around Seaford, Delaware
+    # lat_north = 38.66
+    # lat_south = 38.63
+    # lon_east = -75.59
+    # lon_west = -75.63
+    # Approximate bounds around Millsboro, Delaware
+    # lat_north = 38.60
+    # lat_south = 38.57
+    # lon_east = -75.28
+    # lon_west = -75.32
+    # Approximate bounds around Lewes, Delaware
+    # lat_north = 38.78
+    # lat_south = 38.74
+    # lon_east = -75.12
+    # lon_west = -75.17
+    # Approximate bounds around Trenton, New Jersey
+    # lat_north = 40.25
+    # lat_south = 40.18
+    # lon_east = -74.72
+    # lon_west = -74.80
+    # Approximate bounds around Vineland, New Jersey
+    # lat_north = 39.51
+    # lat_south = 39.45
+    # lon_east = -74.98
+    # lon_west = -75.05
+    # Approximate bounds around Toms River, New Jersey
+    # lat_north = 40.00
+    # lat_south = 39.94
+    # lon_east = -74.14
+    # lon_west = -74.22\
+    # Approximate bounds around Atlantic City, New Jersey
+    # lat_north = 39.38
+    # lat_south = 39.34
+    # lon_east = -74.41
+    # lon_west = -74.45
+    # # Approximate bounds around Philadelphia, Pennsylvania
+    # lat_north = 40.14
+    # lat_south = 39.87
+    # lon_east = -74.96
+    # lon_west = -75.28
+    # Approximate bounds around Pittsburgh, Pennsylvania
+    # lat_north = 40.50
+    # lat_south = 40.36
+    # lon_east = -79.90
+    # lon_west = -80.10
+    # Approximate bounds around Scranton, Pennsylvania
+    # lat_north = 41.45
+    # lat_south = 41.38
+    # lon_east = -75.62
+    # lon_west = -75.70
+    # Approximate bounds around Harrisburg, Pennsylvania
+    # lat_north = 40.32
+    # lat_south = 40.25
+    # lon_east = -76.85
+    # lon_west = -76.93
+    # Approximate bounds around Syracuse, New York
+    # lat_north = 43.080
+    # lat_south = 43.010
+    # lon_east = -76.090
+    # lon_west = -76.180
+    # Refined approximate bounds around New York City, New York
+    # lat_north = 40.92
+    # lat_south = 40.49
+    # lon_east = -73.70
+    # lon_west = -74.04
+    # Approximate bounds around Ithaca, New York
+    # lat_north = 42.467
+    # lat_south = 42.420
+    # lon_east = -76.473
+    # lon_west = -76.530
+    # Approximate bounds around Buffalo, New York
+    # lat_north = 42.96
+    # lat_south = 42.85
+    # lon_east = -78.80
+    # lon_west = -78.92
+    # Approximate bounds around Hartford, Connecticut
+    # lat_north = 41.80
+    # lat_south = 41.73
+    # lon_east = -72.65
+    # lon_west = -72.73
+    # Approximate bounds around New Haven, Connecticut
+    # lat_north = 41.35
+    # lat_south = 41.28
+    # lon_east = -72.88
+    # lon_west = -73.00
+    # Approximate bounds around New London, Connecticut
+    # lat_north = 41.38
+    # lat_south = 41.33
+    # lon_east = -72.08
+    # lon_west = -72.13
+    # Approximate bounds around Danielson, Connecticut
+    # lat_north = 41.82
+    # lat_south = 41.79
+    # lon_east = -71.87
+    # lon_west = -71.91
+    # Approximate bounds around Providence, Rhode Island
+    # lat_north = 41.85
+    # lat_south = 41.78
+    # lon_east = -71.38
+    # lon_west = -71.47
+    # Approximate bounds around East Greenwich, Rhode Island
+    # lat_north = 41.67
+    # lat_south = 41.63
+    # lon_east = -71.44
+    # lon_west = -71.50
+    # Approximate bounds around Charlestown, Rhode Island
+    # lat_north = 41.40
+    # lat_south = 41.34
+    # lon_east = -71.63
+    # lon_west = -71.74
+    # Approximate bounds around Newport, Rhode Island
+    # lat_north = 41.52
+    # lat_south = 41.46
+    # lon_east = -71.28
+    # lon_west = -71.36
+    # Approximate bounds around Boston, Massachusetts
+    # lat_north = 42.40
+    # lat_south = 42.23
+    # lon_east = -70.99
+    # lon_west = -71.19
+    # Approximate bounds around Worcester, Massachusetts
+    # lat_north = 42.31
+    # lat_south = 42.23
+    # lon_east = -71.75
+    # lon_west = -71.85
+    # Approximate bounds around Plymouth, Massachusetts
+    # lat_north = 41.98
+    # lat_south = 41.91
+    # lon_east = -70.66
+    # lon_west = -70.76
+    # Approximate bounds around Northampton, Massachusetts
+    # lat_north = 42.35
+    # lat_south = 42.31
+    # lon_east = -72.63
+    # lon_west = -72.70
+    # Approximate bounds around Montpelier, Vermont
+    # lat_north = 44.28
+    # lat_south = 44.25
+    # lon_east = -72.55
+    # lon_west = -72.60
+    # Approximate bounds around Rutland, Vermont
+    # lat_north = 43.63
+    # lat_south = 43.59
+    # lon_east = -72.95
+    # lon_west = -73.03
+    # Approximate bounds around Randolph, Vermont
+    # lat_north = 43.93
+    # lat_south = 43.90
+    # lon_east = -72.65
+    # lon_west = -72.70
+    # Approximate bounds around Newport, Vermont
+    # lat_north = 44.95
+    # lat_south = 44.92
+    # lon_east = -72.18
+    # lon_west = -72.23
+    # Approximate bounds around Manchester, New Hampshire
+    # lat_north = 43.04
+    # lat_south = 42.95
+    # lon_east = -71.40
+    # lon_west = -71.50
+    # Approximate bounds around Portsmouth, New Hampshire
+    # lat_north = 43.09
+    # lat_south = 43.05
+    # lon_east = -70.74
+    # lon_west = -70.78
+    # Approximate bounds around Concord, New Hampshire
+    # lat_north = 43.24
+    # lat_south = 43.18
+    # lon_east = -71.52
+    # lon_west = -71.58
+    # Approximate bounds around Littleton, New Hampshire
+    # lat_north = 44.32
+    # lat_south = 44.29
+    # lon_east = -71.75
+    # lon_west = -71.80
+    # Approximate bounds around Portland, Maine
+    # lat_north = 43.70
+    # lat_south = 43.64
+    # lon_east = -70.23
+    # lon_west = -70.30
+    # Approximate bounds around Bangor, Maine
+    # lat_north = 44.84
+    # lat_south = 44.77
+    # lon_east = -68.73
+    # lon_west = -68.82
+    # Approximate bounds around Houlton, Maine
+    # lat_north = 46.14
+    # lat_south = 46.12
+    # lon_east = -67.82
+    # lon_west = -67.85
+    # Approximate bounds around Skowhegan, Maine
+    # lat_north = 44.78
+    # lat_south = 44.75
+    # lon_east = -69.70
+    # lon_west = -69.73
+    # Approximate bounds around Cleveland, Ohio
+    # lat_north = 41.54
+    # lat_south = 41.42
+    # lon_east = -81.58
+    # lon_west = -81.75
+    # Approximate bounds around Columbus, Ohio
+    # lat_north = 40.10
+    # lat_south = 39.90
+    # lon_east = -82.85
+    # lon_west = -83.15
+    # Approximate bounds around Cincinnati, Ohio
+    # lat_north = 39.20
+    # lat_south = 39.05
+    # lon_east = -84.42
+    # lon_west = -84.55
+    # Approximate bounds around Chillicothe, Ohio
+    # lat_north = 39.36
+    # lat_south = 39.30
+    # lon_east = -82.95
+    # lon_west = -83.05
+    # Approximate bounds around Lexington, Kentucky
+    # lat_north = 38.12
+    # lat_south = 37.95
+    # lon_east = -84.40
+    # lon_west = -84.55
+    # Approximate bounds around Bowling Green, Kentucky
+    # lat_north = 37.03
+    # lat_south = 36.95
+    # lon_east = -86.38
+    # lon_west = -86.48
+    # Approximate bounds around Madisonville, Kentucky
+    # lat_north = 37.36
+    # lat_south = 37.30
+    # lon_east = -87.47
+    # lon_west = -87.52
+    # Approximate bounds around Paducah, Kentucky
+    # lat_north = 37.10
+    # lat_south = 37.05
+    # lon_east = -88.57
+    # lon_west = -88.65
+    # Approximate bounds around Indianapolis, Indiana
+    # lat_north = 39.91
+    # lat_south = 39.68
+    # lon_east = -86.01
+    # lon_west = -86.29
+    # Approximate bounds around Bloomington, Indiana
+    # lat_north = 39.20
+    # lat_south = 39.10
+    # lon_east = -86.49
+    # lon_west = -86.56
+    # Approximate bounds around Jasper, Indiana
+    # lat_north = 38.42
+    # lat_south = 38.37
+    # lon_east = -86.90
+    # lon_west = -86.96
+    # Approximate bounds around Lafayette, Indiana
+    # lat_north = 40.45
+    # lat_south = 40.37
+    # lon_east = -86.85
+    # lon_west = -86.92
+    # Approximate bounds around Detroit, Michigan
+    # lat_north = 42.45
+    # lat_south = 42.25
+    # lon_east = -82.91
+    # lon_west = -83.20
+    # Approximate bounds around Grand Rapids, Michigan
+    # lat_north = 43.03
+    # lat_south = 42.89
+    # lon_east = -85.60
+    # lon_west = -85.75
+    # Approximate bounds around Ishpeming, Michigan
+    # lat_north = 46.52
+    # lat_south = 46.47
+    # lon_east = -87.64
+    # lon_west = -87.70
+    # Approximate bounds around Marquette, Michigan
+    # lat_north = 46.58
+    # lat_south = 46.52
+    # lon_east = -87.36
+    # lon_west = -87.44
+    # Approximate bounds around Green Bay, Wisconsin
+    # lat_north = 44.56
+    # lat_south = 44.44
+    # lon_east = -87.91
+    # lon_west = -88.08
+    # Approximate bounds around Eau Claire, Wisconsin
+    # lat_north = 44.85
+    # lat_south = 44.78
+    # lon_east = -91.44
+    # lon_west = -91.53d
+    # Approximate bounds around Ashland, Wisconsin
+    # lat_north = 46.61
+    # lat_south = 46.57
+    # lon_east = -90.83
+    # lon_west = -90.91
+    # Approximate bounds around Wisconsin Dells, Wisconsin
+    # lat_north = 43.64
+    # lat_south = 43.60
+    # lon_east = -89.75
+    # lon_west = -89.82
+    # Approximate bounds around Antigo, Wisconsin
+    # lat_north = 45.18
+    # lat_south = 45.13
+    # lon_east = -89.11
+    # lon_west = -89.18
+    # Approximate bounds around Chicago, Illinois
+    # lat_north = 42.02
+    # lat_south = 41.64
+    # lon_east = -87.52
+    # lon_west = -87.94
+    # Approximate bounds around Bloomington, Illinois
+    # lat_north = 40.52
+    # lat_south = 40.44
+    # lon_east = -88.93
+    # lon_west = -89.03
+    # Approximate bounds around Jacksonville, Illinois
+    # lat_north = 39.77
+    # lat_south = 39.70
+    # lon_east = -90.20
+    # lon_west = -90.27
+    # Approximate bounds around Beardstown, Illinois
+    # lat_north = 40.03
+    # lat_south = 39.98
+    # lon_east = -90.41
+    # lon_west = -90.45
+    # Approximate bounds around Minneapolis, Minnesota
+    # lat_north = 45.05
+    # lat_south = 44.89
+    # lon_east = -93.20
+    # lon_west = -93.33
+    # Approximate bounds around St. Cloud, Minnesota
+    # lat_north = 45.60
+    # lat_south = 45.52
+    # lon_east = -94.10
+    # lon_west = -94.22
+    # Approximate bounds around Marshall, Minnesota
+    # lat_north = 44.48
+    # lat_south = 44.43
+    # lon_east = -95.75
+    # lon_west = -95.81
+    # Approximate bounds around Rochester, Minnesota
+    # lat_north = 44.07
+    # lat_south = 43.95
+    # lon_east = -92.41
+    # lon_west = -92.54
+    # Approximate bounds around Des Moines, Iowa
+    # lat_north = 41.65
+    # lat_south = 41.52
+    # lon_east = -93.58
+    # lon_west = -93.71
+    # Approximate bounds around Cedar Rapids, Iowa
+    # lat_north = 42.03
+    # lat_south = 41.90
+    # lon_east = -91.59
+    # lon_west = -91.73
+    # Approximate bounds around Webster City, Iowa
+    # lat_north = 42.47
+    # lat_south = 42.44
+    # lon_east = -93.79
+    # lon_west = -93.83
+    # Approximate bounds around Waterloo, Iowa
+    # lat_north = 42.53
+    # lat_south = 42.45
+    # lon_east = -92.29
+    # lon_west = -92.38
+    # Approximate bounds around St. Louis, Missouri
+    # lat_north = 38.77
+    # lat_south = 38.56
+    # lon_east = -90.17
+    # lon_west = -90.30
+    # Approximate bounds around Columbia, Missouri
+    # lat_north = 39.02
+    # lat_south = 38.88
+    # lon_east = -92.27
+    # lon_west = -92.39
+    # Approximate bounds around Jefferson City, Missouri
+    # lat_north = 38.61
+    # lat_south = 38.53
+    # lon_east = -92.13
+    # lon_west = -92.23
+    # Approximate bounds around Branson, Missouri
+    # lat_north = 36.67
+    # lat_south = 36.62
+    # lon_east = -93.20
+    # lon_west = -93.27
+    # Approximate bounds around Conway, Arkansas
+    # lat_north = 35.12
+    # lat_south = 35.05
+    # lon_east = -92.38
+    # lon_west = -92.47
+    # Approximate bounds around Pine Bluff, Arkansas
+    # lat_north = 34.24
+    # lat_south = 34.18
+    # lon_east = -91.97
+    # lon_west = -92.05
+    # Approximate bounds around Fayetteville, Arkansas
+    # lat_north = 36.12
+    # lat_south = 36.04
+    # lon_east = -94.13
+    # lon_west = -94.22
+    # Approximate bounds around Hot Springs, Arkansas
+    # lat_north = 34.53
+    # lat_south = 34.47
+    # lon_east = -93.01
+    # lon_west = -93.08
+    # Approximate bounds around Bismarck, North Dakota
+    # lat_north = 46.85
+    # lat_south = 46.74
+    # lon_east = -100.68
+    # lon_west = -100.83
+    # Approximate bounds around Jamestown, North Dakota
+    # lat_north = 46.94
+    # lat_south = 46.88
+    # lon_east = -98.67
+    # lon_west = -98.74
+    # Approximate bounds around Minot, North Dakota
+    # lat_north = 48.26
+    # lat_south = 48.20
+    # lon_east = -101.25
+    # lon_west = -101.33
+    # Approximate bounds around Grafton, North Dakota
+    # lat_north = 48.43
+    # lat_south = 48.40
+    # lon_east = -97.39
+    # lon_west = -97.44
+    # Approximate bounds around Chamberlain, South Dakota
+    # lat_north = 43.82
+    # lat_south = 43.78
+    # lon_east = -99.30
+    # lon_west = -99.35
+    # Approximate bounds around Rapid City, South Dakota
+    # lat_north = 44.13
+    # lat_south = 44.01
+    # lon_east = -103.16
+    # lon_west = -103.29
+    # Approximate bounds around Sioux Falls, South Dakota
+    # lat_north = 43.61
+    # lat_south = 43.49
+    # lon_east = -96.65
+    # lon_west = -96.80
+    # Approximate bounds around Aberdeen, South Dakota
+    # lat_north = 45.50
+    # lat_south = 45.44
+    # lon_east = -98.44
+    # lon_west = -98.53
+    # Approximate bounds around Omaha, Nebraska
+    # lat_north = 41.38
+    # lat_south = 41.19
+    # lon_east = -95.92
+    # lon_west = -96.10
+    # Approximate bounds around Grand Island, Nebraska
+    # lat_north = 40.94
+    # lat_south = 40.88
+    # lon_east = -98.34
+    # lon_west = -98.39
+    # Approximate bounds around Norfolk, Nebraska
+    # lat_north = 42.05
+    # lat_south = 41.99
+    # lon_east = -97.38
+    # lon_west = -97.47
+    # Approximate bounds around Alliance, Nebraska
+    # lat_north = 42.12
+    # lat_south = 42.08
+    # lon_east = -102.85
+    # lon_west = -102.90
+    # Approximate bounds around Kansas City, Kansas
+    # lat_north = 39.17
+    # lat_south = 39.05
+    # lon_east = -94.62
+    # lon_west = -94.80
+    # Approximate bounds around Hays, Kansas
+    # lat_north = 38.90
+    # lat_south = 38.85
+    # lon_east = -99.30
+    # lon_west = -99.35
+    # Approximate bounds around Dodge City, Kansas
+    # lat_north = 37.79
+    # lat_south = 37.72
+    # lon_east = -100.00
+    # lon_west = -100.05
+    # Approximate bounds around Topeka, Kansas
+    # lat_north = 39.13
+    # lat_south = 39.00
+    # lon_east = -95.63
+    # lon_west = -95.79
+    # Approximate bounds around Tulsa, Oklahoma
+    # lat_north = 36.21
+    # lat_south = 36.10
+    # lon_east = -95.85
+    # lon_west = -96.00
+    # Approximate bounds around Elk City, Oklahoma
+    # lat_north = 35.43
+    # lat_south = 35.38
+    # lon_east = -99.38
+    # lon_west = -99.44
+    # Approximate bounds around Guymon, Oklahoma
+    # lat_north = 36.72
+    # lat_south = 36.67
+    # lon_east = -101.46
+    # lon_west = -101.51
+    # Approximate bounds around Lawton, Oklahoma
+    # lat_north = 34.65
+    # lat_south = 34.55
+    # lon_east = -98.35
+    # lon_west = -98.48
+    # Approximate bounds around Billings, Montana
+    # lat_north = 45.85
+    # lat_south = 45.73
+    # lon_east = -108.43
+    # lon_west = -108.59
+    # Approximate bounds around Miles City, Montana
+    # lat_north = 46.45
+    # lat_south = 46.40
+    # lon_east = -105.82
+    # lon_west = -105.90
+    # Approximate bounds around Butte, Montana
+    # lat_north = 46.02
+    # lat_south = 45.98
+    # lon_east = -112.50
+    # lon_west = -112.60
+    # Approximate bounds around Bozeman, Montana
+    # lat_north = 45.70
+    # lat_south = 45.65
+    # lon_east = -111.03
+    # lon_west = -111.09
+    # Approximate bounds around Great Falls, Montana
+    # lat_north = 47.54
+    # lat_south = 47.47
+    # lon_east = -111.24
+    # lon_west = -111.33
+
+
+
+
+
+26000pics =  $182 + 130 = 312
