@@ -11,7 +11,7 @@ from csv import writer
 output_folder = 'data/images/'  # Output folder for the images
 global_metadata_path = 'data/images/global_metadata.csv'
 image_count = 5 # Amount of images to pull
-api_key = ''  # Your Google Street View API Key, replace YOUR_API_KEY_HERE with your actual key
+api_key = 'YOUR_API_KEY_HERE'  # Your Google Street View API Key, replace YOUR_API_KEY_HERE with your actual key
 url = 'https://maps.googleapis.com/maps/api/streetview'
 geocode_url = 'https://maps.googleapis.com/maps/api/geocode/json'
 
