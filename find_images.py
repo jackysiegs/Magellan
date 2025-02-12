@@ -8,10 +8,10 @@ import csv
 from csv import writer
 
 # Configuration
-output_folder = 'data/images/'  # Output folder for the images
+output_folder = 'data/images/'  
 global_metadata_path = 'data/images/global_metadata.csv'
-image_count = 5 # Amount of images to pull
-api_key = 'YOUR_API_KEY_HERE'  # Your Google Street View API Key, replace YOUR_API_KEY_HERE with your actual key
+image_count = 5 
+api_key = 'YOUR_API_KEY_HERE'  # Your Google Street View API Key
 url = 'https://maps.googleapis.com/maps/api/streetview'
 geocode_url = 'https://maps.googleapis.com/maps/api/geocode/json'
 
