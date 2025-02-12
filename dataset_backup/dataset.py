@@ -13,11 +13,10 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Dataset class for city-specific metadata (regular images)
 class GeoGuessCityDataset(Dataset):
-    def __init__(self, base_folder, transform=None, max_images=50):
+    def __init__(self, base_folder, transform=None):
         self.base_folder = base_folder
         self.transform = transform
         self.metadata = self.load_all_metadata()
-        self.max_images = max_images  # Limit to 50 images for testing
 
     def load_all_metadata(self):
         all_metadata = []
@@ -34,29 +33,29 @@ class GeoGuessCityDataset(Dataset):
         return pd.concat(all_metadata, ignore_index=True)
 
     def __len__(self):
-        return min(self.max_images, len(self.metadata))  # Limit to 50 images
+        return len(self.metadata)
 
     def __getitem__(self, idx):
         img_path = self.metadata.iloc[idx]['File Path']
         
+        # Check if the file exists, and skip if it doesn't
         if not os.path.exists(img_path):
             print(f"Warning: Image not found, skipping: {img_path}")
-            return None
+            return None  # This will skip the image
 
+        # Load the image
         image = Image.open(img_path).convert('RGB')
         if self.transform:
             image = self.transform(image)
 
+        # Ensure latitude and longitude are floats
         latitude = float(self.metadata.iloc[idx]['Latitude'])
         longitude = float(self.metadata.iloc[idx]['Longitude'])
+        coordinates = torch.tensor([latitude, longitude], dtype=torch.float32)
 
-        latitude_normalized = (latitude + 90) / 180  # Latitude from [-90, 90] to [0, 1]
-        longitude_normalized = (longitude + 180) / 360  # Longitude from [-180, 180] to [0, 1]
-
-        coordinates = torch.tensor([latitude_normalized, longitude_normalized], dtype=torch.float32)
-
+        # Get the region (from the State)
         region = assign_region(self.metadata.iloc[idx]['State'])
-        if region is None:
+        if region is None:  # Skip if the region is unknown
             print(f"Warning: Unknown state found, skipping: {self.metadata.iloc[idx]['State']}")
             return None
 
@@ -64,13 +63,12 @@ class GeoGuessCityDataset(Dataset):
 
 # Dataset class for augmented images
 class GeoGuessAugmentedDataset(Dataset):
-    def __init__(self, csv_file, transform=None, max_images=50):
+    def __init__(self, csv_file, transform=None):
         self.metadata = pd.read_csv(csv_file, header=None, names=['ID', 'Latitude', 'Longitude', 'State', 'City', 'File Path'])
         self.transform = transform
-        self.max_images = max_images  # Limit to 50 images for testing
 
     def __len__(self):
-        return min(self.max_images, len(self.metadata))  # Limit to 50 images
+        return len(self.metadata)
 
     def __getitem__(self, idx):
         img_path = self.metadata.iloc[idx]['File Path']
@@ -78,16 +76,14 @@ class GeoGuessAugmentedDataset(Dataset):
         if self.transform:
             image = self.transform(image)
 
+        # Labels
         latitude = self.metadata.iloc[idx]['Latitude']
         longitude = self.metadata.iloc[idx]['Longitude']
+        coordinates = torch.tensor([latitude, longitude], dtype=torch.float32)
 
-        latitude_normalized = (latitude + 90) / 180
-        longitude_normalized = (longitude + 180) / 360
-
-        coordinates = torch.tensor([latitude_normalized, longitude_normalized], dtype=torch.float32)
-
+        # Get the region (from the State)
         region = assign_region(self.metadata.iloc[idx]['State'])
-        if region is None:
+        if region is None:  # Skip if the region is unknown
             print(f"Warning: Unknown state found, skipping: {self.metadata.iloc[idx]['State']}")
             return None
 
@@ -108,7 +104,7 @@ def assign_region(state):
     for region, states in region_map.items():
         if state in states:
             return region_labels[region]
-    return None
+    return None  # Return None instead of -1 for unknown states
 
 # The neural network model
 class GeoGuessNet(nn.Module):
@@ -130,7 +126,7 @@ class GeoGuessNet(nn.Module):
         self.coord_fc1 = nn.Linear(512 * 20 * 20 + num_regions, 128)
         self.bn_coord = nn.BatchNorm1d(128)
         self.coord_fc2 = nn.Linear(128, 64)
-        self.coord_out = nn.Linear(64, 2)  # Output normalized latitude and longitude
+        self.coord_out = nn.Linear(64, 2)  # Output latitude and longitude
 
     def forward(self, x):
         features = self.resnet(x)
@@ -143,12 +139,6 @@ class GeoGuessNet(nn.Module):
         coord_x = F.relu(self.coord_fc2(coord_x))
         coord_out = self.coord_out(coord_x)
         return region_out, coord_out
-
-# Function to denormalize predicted coordinates
-def denormalize_coordinates(coord_tensor):
-    latitude = coord_tensor[0] * 180 - 90  # Convert from [0, 1] back to [-90, 90]
-    longitude = coord_tensor[1] * 360 - 180  # Convert from [0, 1] back to [-180, 180]
-    return latitude, longitude
 
 # Freeze the ResNet layers for the first phase
 def freeze_resnet_layers(model):
@@ -335,15 +325,15 @@ def train_on_augmented_images(model, augmented_metadata_file, num_epochs):
 
     return train_model(model, train_loader, criterion_region, criterion_coords, optimizer, num_epochs, 'aug_epoch_batch_loss.csv')
 
-# Updated main training function
+# Main training function
 if __name__ == '__main__':
     model = GeoGuessNet(num_regions=6)
     model.to(device)
     base_folder = 'data/images'
     augmented_metadata_file = 'data/images/augmented_global_metadata.csv'
 
-    # Phase 1: Train only on region for 10 epochs with only 50 images
-    print("Training only on region guessing for 10 epochs (test with 50 images)...")
+    # Phase 1: Train only on region for 10 epochs
+    print("Training only on region guessing for 10 epochs...")
     train_phase_1_region_only(model, base_folder, num_epochs=10)
 
     # Unfreeze coordinate layers for next phases
@@ -351,13 +341,13 @@ if __name__ == '__main__':
     model.coord_fc2.requires_grad_(True)
     model.coord_out.requires_grad_(True)
 
-    # Phase 2: Train on regular images for region + coordinates with only 50 images
-    print("Training on regular images (test with 50 images)...")
+    # Phase 2: Train on regular images for region + coordinates
+    print("Training on regular images...")
     regular_losses = train_on_regular_images(model, base_folder, num_epochs=20)
 
-    # Phase 3: Train on augmented images for region + coordinates with only 50 images
-    print("Training on augmented images (test with 50 images)...")
+    # Phase 3: Train on augmented images for region + coordinates
+    print("Training on augmented images...")
     augmented_losses = train_on_augmented_images(model, augmented_metadata_file, num_epochs=20)
 
-    torch.save(model.state_dict(), 'geoguess_model_test.pth')
+    torch.save(model.state_dict(), 'geoguess_model.pth')
     print("Model saved successfully!")

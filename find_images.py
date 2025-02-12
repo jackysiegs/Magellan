@@ -17,12 +17,11 @@ geocode_url = 'https://maps.googleapis.com/maps/api/geocode/json'
 
 
 def generate_random_coords():
-    # Approximate bounds around Dallas, Texas
-    lat_north = 33.00
-    lat_south = 32.62
-    lon_east = -96.46
-    lon_west = -96.999
-
+    # Approximate bounds around Mt. Shasta, California
+    lat_north = 41.42
+    lat_south = 41.30
+    lon_east = -122.30
+    lon_west = -122.45
     return (uniform(lat_south, lat_north), uniform(lon_west, lon_east))
 
 def check_image_validity(image_bytes):
